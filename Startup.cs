@@ -19,7 +19,8 @@ namespace WebAPI5
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSingleton<IUserRepository, UserRepository>();
+            //services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddSingleton(typeof(IBaseRepository<>), typeof(BaseRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -6,7 +6,7 @@ using WebAPI5.Infrastructure;
 namespace WebAPI5.Repositories
 {
 
-    public abstract class BaseRepository<T>: IBaseRepository<T> where T : IBaseModel
+    public class BaseRepository<T>: IBaseRepository<T> where T : IBaseModel
     {
         private readonly FakeDbContext _db = new FakeDbContext();
         private readonly List<T> _table;

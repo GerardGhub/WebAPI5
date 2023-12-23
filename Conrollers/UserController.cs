@@ -9,9 +9,9 @@ namespace WebAPI5.Conrollers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IBaseRepository<User> _userRepository;
 
-        public UserController(IUserRepository userRepository)
+        public UserController(IBaseRepository<User> userRepository)
         {
             _userRepository = userRepository;
         }
